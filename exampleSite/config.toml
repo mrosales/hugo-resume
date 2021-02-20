@@ -8,19 +8,15 @@ PygmentsStyle = "monokai"
 enableGitInfo = false
 
 [params]
-address = "Rollinsford, NH"
-email = "email@domain.com"
 favicon = "/favicon.ico"
 firstName = "Eddie"
 lastName = "Webb"
-phone = "1-555-555-1234"
 profileImage = "img/TechChat.png"
 showEducation = true
 showExperience = true
 showOpenSource = true
 showProjects = true
 showPublications = true
-showQr = true
 showSkills = true
 
 [params.google]

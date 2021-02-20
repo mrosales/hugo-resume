@@ -4,6 +4,10 @@ body {
   color: #868e96;
 }
 
+.hero-title {
+  margin-bottom: 20pt;
+}
+
 @media (min-width: 992px) {
   body {
     padding-top: 0;
@@ -21,7 +25,6 @@ h6 {
   font-weight: 700;
   color: #FBFCFF;
 }
-
 
 h1, h2{
   text-transform: uppercase;
