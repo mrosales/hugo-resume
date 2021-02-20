@@ -18,6 +18,11 @@
             <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
           </li>
       {{ end }}
+      {{ if .Site.Params.showExperience }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
+          </li>
+      {{ end }}
       {{ if .Site.Params.showProjects }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
@@ -31,16 +36,6 @@
       {{ if .Site.Params.showPublications }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#{{ default "Publications" .Site.Params.publicationsAlternateName }}">{{ default "Publications" .Site.Params.publicationsAlternateName }}</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showExperience }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showEducation }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#education">Education</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showBlog }}
