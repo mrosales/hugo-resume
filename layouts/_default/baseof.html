@@ -28,8 +28,9 @@
     <noscript><link rel="stylesheet" href="{{ "css/resume.css" | absURL }}"></noscript>
   <link rel="preload" href="{{ "css/tweaks.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ "css/tweaks.css" | absURL }}"></noscript>
-  <link rel="preload" href="{{ "css/resume-override.css" | absURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ "css/resume-override.css" | absURL }}"></noscript>
+  {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+  {{- end }}
   {{ hugo.Generator }}
   {{ block "headfiles" . }}
    <!-- pl;aceholder -->
