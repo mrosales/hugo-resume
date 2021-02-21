@@ -2,6 +2,11 @@ body {
   font-family: 'Quattrocento', serif;
   padding-top: 54px;
   color: #868e96;
+  background-color: #312F2F;
+}
+
+.breadcrumb {
+  background-color: #312F2F;
 }
 
 .hero-title {
@@ -162,4 +167,10 @@ a:hover, a:focus, a:active {
 
 img {
   max-width:80%;
+}
+
+.post-image {
+  max-width: 250px;
+  max-height: 250px;
+  padding-right: 1em;
 }

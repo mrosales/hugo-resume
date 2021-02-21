@@ -30,8 +30,9 @@ div.skills-heading{
 
 /* From https://codepen.io/wbeeftink/pen/dIaDH */
 
+
 .tags {
-    font: 12px/1.5 'PT Sans', serif;
+  font: 12px/1.5 'PT Sans', serif;
   list-style: none;
   margin: 0;
   overflow: hidden;
@@ -40,53 +41,58 @@ div.skills-heading{
 
 .tags li {
   float: left;
+  margin-right: 1em;
 }
 
-.tag {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #999;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
+.tags a {
+	display: inline-block;
+	height:24px;
+	line-height:23px;
+	position:relative;
+	margin: 0 12px 8px 0;
+	padding: 0 6px 0 10px;
+	background: #777;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border-top-left-radius: 5px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	color: #fff;
+	font-size:12px;
+	font-family: 'Quattrocento', serif;
+	text-decoration: none;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	font-weight: bold;
 }
+	
+.tags a:after {
+	content: "";
+	position: absolute;
+	top:0;
+	right: -12px;
+	width: 0;
+	height: 0;
+	border-color: transparent transparent transparent #777;
+	border-style: solid;
+	border-width: 12px 0 12px 12px;
+	}
+	
+.tags a.color1 {background: #f58220;}
+.tags a.color1:after {border-color: transparent transparent transparent #f58220}
+.tags a.color2 {background: #97c224;}
+.tags a.color2:after {border-color: transparent transparent transparent #97c224}
+.tags a.color3 {background: #de3f3e;}
+.tags a.color3:after {border-color: transparent transparent transparent #de3f3e}
+.tags a.color4 {background: #ec008c;}
+.tags a.color4:after {border-color: transparent transparent transparent #ec008c}
+.tags a.color5 {background: #00a6df;}
+.tags a.color5:after {border-color: transparent transparent transparent #00a6df}	
+.tags a:hover {background:#222 !important}
+.tags a:hover:after {border-color:transparent transparent transparent #222!important}
 
-.tag::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
-
-.tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tag:hover {
-  background-color: crimson;
-  color: white;
-}
-
-.tag:hover::after {
-   border-left-color: crimson;
-}
+/* End Tags */
 
 .project-fact{
   font-size:80%;

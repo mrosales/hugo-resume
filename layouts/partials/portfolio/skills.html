@@ -17,7 +17,7 @@
                     </li>
                 {{ else }}
                   <li class="list-inline-item">
-                    {{ $devicon := cond (in $.Site.Data.devicons (lower .icon)) (lower .icon) (cond (in $.Site.Data.devicons (lower .name)) (lower .name) "bash") }}
+                    {{ $devicon := cond (in $.Site.Data.devicons (lower .)) (lower .) "bash" }}
                     <i class="devicon-{{ $devicon }}-plain"></i>
                     {{ . }}
                   </li>

@@ -1,5 +1,13 @@
 <ul class="tags">
     {{ range  .Params.tags }}
-      <li><a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+    {{ $devicon := cond (in $.Site.Data.devicons (lower .)) (lower .) "" }}
+      <li>
+        <a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}">
+          {{ if $devicon }}
+          <i class="devicon-{{ $devicon }}-plain"></i>
+          {{ end }}
+          {{ . | upper }}
+        </a>
+      </li>
     {{ end }}
 </ul>

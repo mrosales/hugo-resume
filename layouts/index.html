@@ -7,13 +7,13 @@
        {{ partial "portfolio/experience.html" . }}
    {{ end }}
    {{ if .Site.Params.showProjects }}
-      {{ with .Site.GetPage "section" "projects/creations" }}
+      {{ with .Site.GetPage "section" "projects" }}
          {{ .Scratch.Set "sectionId" "projects" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
    {{ if .Site.Params.showOpenSource }}
-      {{ with .Site.GetPage "section" "projects/contributions" }}
+      {{ with .Site.GetPage "section" "contributions" }}
          {{ .Scratch.Set "sectionId" "open" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
