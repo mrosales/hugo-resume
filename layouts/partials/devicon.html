@@ -1,0 +1,7 @@
+{{ $aliases := .ctx.Site.Data.deviconAliases }}
+{{ $all := .ctx.Site.Data.devicons }}
+{{ $icon := (default (lower .icon) (index $aliases (lower .icon))) }}
+{{ $icon := (cond (in $all $icon) $icon (default nil .default)) }}
+{{ with $icon }}
+<i class="devicon-{{ . }}-plain"></i>
+{{ end }}

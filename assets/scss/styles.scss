@@ -1,0 +1,158 @@
+@import '_colors';
+@import '_fonts';
+@import '_nav';
+@import '_tags';
+
+body {
+    font-family: $body-font-stack;
+    padding-top: 54px;
+    color: $color-text;
+    background-color: $color-background;
+}
+
+.breadcrumb {
+    background-color: $color-background;
+}
+
+.hero-title {
+    margin-bottom: 20pt;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 0;
+        padding-left: 17rem;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header-font-stack;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+    color: $color-accent-primary;
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 5.5rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+.text-color-default {
+    color: $color-text;
+}
+
+.subheading {
+    text-transform: uppercase;
+    font-family: $header-font-stack;
+    font-weight: 500;
+    font-size: 1.35rem;
+}
+
+.list-social-icons {
+    a {
+        color: #495057;
+        .fa-lg {
+            font-size: 1.75rem;
+        }
+        &:hover {
+            color: $color-accent-primary;
+        }
+    }
+}
+
+.list-icons {
+    font-size: 3rem;
+    .list-inline-item {
+        i {
+            &:hover {
+                color: $color-accent-primary;
+            }
+        }
+    }
+}
+
+section.resume-section {
+    border-bottom: 1px solid $color-accent-secondary;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+    background-color: $color-background;
+    color: $color-text;
+    .resume-item-wrapper {
+        margin-bottom: 2em;
+    }
+    .resume-item .resume-date {
+        min-width: none;
+    }
+}
+
+@media (min-width: 768px) {
+    section.resume-section {
+        min-height: 100vh;
+    }
+    section.resume-section .resume-item .resume-date {
+        min-width: 18rem;
+    }
+}
+
+@media (min-width: 992px) {
+    section.resume-section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+.bg-primary {
+    background-color: $color-accent-primary !important;
+}
+
+.accent {
+    color: $color-accent-primary !important;
+}
+
+a {
+    color: $color-accent-primary;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color-accent-secondary;
+    }
+}
+
+img {
+    max-width: 80%;
+}
+
+.post-image {
+    max-width: 250px;
+    max-height: 250px;
+    padding-right: 1em;
+}
+
+.p-0 {
+    margin: 0 auto;
+}
+
+.resume-section blockquote {
+    border-left: 4px solid $color-accent-secondary;
+    padding-left: 1em;
+}
+
+@import '_override';

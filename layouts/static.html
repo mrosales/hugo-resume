@@ -1,0 +1,10 @@
+{{/* Static page template. Set "layout" to "static" in your front-matter md file. */}}
+{{ define "main" }}
+{{ partial "breadcrumbs" . }}
+<section class="resume-section p-3 p-lg-5 d-flex flex-column">
+  <div id="projects-content">
+    <h1 id="{{ urlize .Title }}" class="hero-title">{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+  </div>
+</section>
+{{ end }}

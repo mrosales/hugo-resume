@@ -2,7 +2,15 @@
 title: 'Forcing Visits to use SSL'
 date: Thu, 01 Jan 2009 14:09:10 +0000
 draft: false
-tags: [apache, apache, redirect, rewrite, ssl, web development]
+featured: true
+tags: [apache, redirect, rewrite, ssl, web development]
+description: |
+    Doesn't matter whether it's a CakePHP app for a client, your own personal 
+    CMS, or any other web based application. If you're passing around 
+    passwords or other sensitive info you should really implement SSL.
+
+    Once you implement SSL certificates on your server you'll want to **require 
+    secure connections** using Apache's rewrite module.
 ---
 
 Intro

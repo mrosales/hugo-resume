@@ -1,0 +1,21 @@
+<div class="resume-item-wrapper">
+  <h3 class="mb-3"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+  <div class="resume-item d-flex flex-column flex-md-row mb-3">
+    {{ if .Params.image }}
+    <div class="resume-content post-image my-auto">
+      {{with  .Params.image }}
+        <img src="{{ . }}" style="max-height:150px;max-width:150px;"/>
+      {{ end }}
+    </div>
+    {{ end }}
+    <div class="resume-content">
+      {{ if .Description }}
+      <p>{{ .Description | markdownify | safeHTML }}<p>
+      <p class><a href="{{.Permalink}}">Read more..</a></p>
+      {{ else }}
+      {{ .Content | markdownify }}
+      {{ end }}
+    </div>
+  </div>
+  <div>{{ partial "posts/tagList" . }}</div>
+</div>

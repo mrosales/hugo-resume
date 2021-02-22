@@ -12,17 +12,33 @@ favicon = "/favicon.ico"
 firstName = "Eddie"
 lastName = "Webb"
 profileImage = "img/TechChat.png"
-showEducation = true
-showExperience = true
-showOpenSource = true
-showProjects = true
-showPublications = true
-showSkills = true
+
+[[params.sections]]
+title = "Skills"
+
+[[params.sections]]
+title = "Experience"
+
+[[params.sections]]
+title = "Projects"
+
+[[params.sections]]
+title = "Contributions"
+
+[[params.sections]]
+title = "Education"
+
+[[params.sections]]
+title = "Blog"
+
+[[params.sections]]
+title = "Contact Me"
+id = "contact"
 
 [params.google]
 
 [params.google.analytics]
-trackerID = "XX-123446-01"
+trackerID = ""
 
 [[params.handles]]
 link = "https://www.linkedin.com/in/edwardwebb/"
@@ -44,8 +60,16 @@ name = "Stack Overflow"
 link = "https://keybase.io/edwardawebb"
 name = "Keybase"
 
+[[params.handles]]
+link = "/#contact"
+name = "Contact Me"
+icon = "at"
+
 [outputs]
 home = ["HTML", "JSON"]
 
 [taxonomies]
 tag = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true

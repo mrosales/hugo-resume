@@ -1,0 +1,6 @@
+    <li>
+      <a class="tag" href="{{ "/tags/" | relURL }}{{ .name | urlize }}">
+        {{ partial "devicon" (dict "icon" .name "ctx" .ctx)}}
+        {{ .name | upper }}
+      </a>
+    </li>

@@ -1,0 +1,22 @@
+        {{ range $.Site.Data.skills.groupings }}
+        <div class="subheading skills-heading">{{ .name }}</div>
+        <ul>
+        {{ range .skills }}
+            {{ if isset . "name" }}
+                <li class="list-inline-item">
+                  {{ partial "devicon" (dict "icon" (default .name .icon) "ctx" $ "default" "bash") }}
+                  {{if isset . "link"}}
+                      <a href="{{.link}}">{{ .name }}</a>
+                  {{ else }}
+                      {{ .name }}
+                  {{ end }}
+                </li>
+            {{ else }}
+              <li class="list-inline-item">
+                {{ partial "devicon" (dict "icon" . "ctx" $ "default" "bash") }}
+                {{ . }}
+              </li>
+            {{ end }}
+        {{ end }}
+        </ul>
+        {{ end }}

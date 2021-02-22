@@ -1,0 +1,13 @@
+/*
+You can override the theme default colors by changing them
+in this file.
+*/
+$_ghost-white: #FBFCFF;
+$_jet-black: #312F2F;
+$_pacific-blue: #37AEBE;
+$_light-blue: #95C7CF;
+
+$color-accent-primary: $_pacific-blue;
+$color-accent-secondary: $_light-blue;
+$color-background: $_jet-black;
+$color-text: $_ghost-white;

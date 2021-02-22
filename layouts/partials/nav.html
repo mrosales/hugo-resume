@@ -13,39 +13,11 @@
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="{{ "#about" | relURL }}">About</a>
       </li>
-      {{ if .Site.Params.showSkills }}
+      {{ $pageScope := . }}
+      {{ range .Site.Params.Sections }}
+          {{ $sectionId := (default (lower .title | urlize) .id) }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showExperience }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showProjects }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showOpenSource }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#open">Open Source</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showPublications }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#{{ default "Publications" .Site.Params.publicationsAlternateName }}">{{ default "Publications" .Site.Params.publicationsAlternateName }}</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showBlog }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#blog">Blog</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showContact }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/contact/">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="/#{{ $sectionId }}">{{ .title }}</a>
           </li>
       {{ end }}
     </ul>
